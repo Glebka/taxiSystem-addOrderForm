@@ -1,0 +1,69 @@
+#addOrderForm .checkbox.field,
+#editOrderForm .checkbox.field {
+	padding-top: 30px;
+}
+.ui.ribbon.label {
+	left: calc(0rem - 1.2em);
+	margin-bottom: -7px;
+}
+.ui.displayOrderModal .ui.grid,
+.ui.editOrderModal .ui.grid {
+	margin-right: 0;
+	margin-left: 0;
+}
+.ui.horizontal.segments>.segment {
+	min-width: 50%;
+}
+#editOrderForm,
+.editDriverModal  form {
+	padding: 20px;
+}
+#editOrderForm .status.ui.button {
+	margin-left: 10px;
+    padding: 5px 15px;
+}
+#editOrderForm .current-status {
+	margin-bottom: 15px;
+}
+#editOrderForm .calendar-field {
+	align-self: flex-end;
+}
+.calendar-field input {
+	width: auto;
+}
+.status-wrap {
+	width: 160px;
+}
+.ui.button.driver-status,
+.ui.button.order-status {
+	margin: 0 auto;
+	display: block;
+}
+.displayDriverModal .description {
+	margin: 15px 0;
+}
+.displayDriverModal .ui.cards > .card {
+	width: 100%;
+}
+.displayDriverModal .ui.horizontal.segments {
+	width: 100%;
+}
+.field.has-error input,
+.field.has-error textarea {
+	border: 1px solid rgb(240, 10, 10) !important;
+}
+.field.has-error .help-error {
+	color: rgb(240, 10, 10);
+	padding-left: 10px;
+}
+.ui.cards>.card {
+	width: 100%;
+}
+#map {
+	height: 450px;
+	width: 100%;
+}
+.map .address {
+	text-align: center;
+	padding: 10px 0;
+}
