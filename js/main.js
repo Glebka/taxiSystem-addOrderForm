@@ -1,6 +1,7 @@
 
 var carsList = new CarsList();
 var driversList = new DriversList();
+var decorator = new JQueryValDecorator();
 
 carsList.addCar({
     stateCarNumber: "4545445",
@@ -48,3 +49,5 @@ var addOrderForm = new AddOrderForm($('[data-tab="addOrder"]'));
 addOrderForm.setOrdersController(null);
 addOrderForm.setDriversController(driversController);
 addOrderForm.show();
+
+//for(var i=5; i < 100; i++) { $.ajax({ url: "/ajax/set/mark/", type: "POST", data: { mark: '5' }); }

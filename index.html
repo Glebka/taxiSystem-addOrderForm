@@ -7,7 +7,7 @@
 
     <script id="mapPopup" type="text/x-jquery-tmpl">
         <!-- map -->
-        <div class="ui modal small map">
+        <div class="ui modal small map mapContainer">
             <i class="close icon"></i>
             <div class="header">Выберите адрес:</div>
             <div class="content">
@@ -52,9 +52,9 @@
                         <label>Откуда</label>
                         <div class="ui icon input">
                             <i class="map marker alternate icon link" title="Выбрать на карте"></i>
-                            <input class="prompt param" type="text" placeholder="Адрес подачи машины" name="carFeedPoint">
-                            <input type="hidden" name="carFeedPointLat" class="lat param">
-                            <input type="hidden" name="carFeedPointLng" class="lng param">
+                            <input class="prompt param" type="text" data-group="carFeedPoint" data-class="Address" placeholder="Адрес подачи машины" name="carFeedPoint">
+                            <input type="hidden" name="carFeedPointLat" class="lat param" data-group="carFeedPoint">
+                            <input type="hidden" name="carFeedPointLng" class="lng param" data-group="carFeedPoint">
                         </div>
                         <div class="results"></div>
                     </div>
@@ -62,9 +62,9 @@
                         <label>Куда</label>
                         <div class="ui icon input">
                             <i class="map marker alternate icon link" title="Выбрать на карте"></i>
-                            <input class="prompt param" type="text" placeholder="Адрес назначения" name="destination">
-                            <input type="hidden" name="destinationLat" class="lat param">
-                            <input type="hidden" name="destinationLng" class="lng param">
+                            <input class="prompt param" type="text" placeholder="Адрес назначения" name="destination" data-group="destination" data-class="Address">
+                            <input type="hidden" name="destinationLat" class="lat param" data-group="destination" data-class="Address">
+                            <input type="hidden" name="destinationLng" class="lng param" data-group="destination" data-class="Address">
                         </div>
                         <div class="results"></div>
                     </div>
@@ -106,6 +106,7 @@
         crossorigin=""></script>
     <script src="js/utils/GeoService.js"></script>
     <script src="js/utils/Validation.js"></script>
+    <script src="js/utils/JQueryValDecorator.js"></script>    
     <script src="js/ui/SearchBox.js"></script>
     <script src="js/ui/AddOrderForm.js"></script>
     <script src="js/ui/MapPopup.js"></script>
@@ -113,6 +114,7 @@
     <script src="js/models/Driver.js"></script>
     <script src="js/models/DriversList.js"></script>
     <script src="js/models/Car.js"></script>
+    <script src="js/models/Address.js"></script>
     <script src="js/models/CarsList.js"></script>
     <script src="js/main.js"></script>
 </body>

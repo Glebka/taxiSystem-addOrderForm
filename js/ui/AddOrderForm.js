@@ -11,7 +11,6 @@ class AddOrderForm {
         this._isSetDriverAutomaticallyChecked = false;
         this._addOrderFormElement.find('.submit').click(this._onAddOrderFormSubmit.bind(this));
         this._addOrderFormConstraints = Validation.getOrderConstraints();
-        //this._map = new MapPopup($(".map.modal"));
         this._addOrderFormElement
             .find(".carFeedPoint .map.marker")
             .click(this._onShowMapClick.bind(
@@ -60,8 +59,9 @@ class AddOrderForm {
             }
         }
         if(!errors) {
-            this._ordersController.addOrder(orderParams);
-            this._addOrderFormElement.find('form')[0].reset();
+            console.log(orderParams);
+            //this._ordersController.addOrder(orderParams);
+            //this._addOrderFormElement.find('form')[0].reset();
         }
     }
 
@@ -89,7 +89,8 @@ class AddOrderForm {
     }
 
     _onShowMapClick(inputAddress, inputLat, inputLng) {
-        this._map.show(function(address){
+        var mapPopup = new MapPopup();
+        mapPopup.show(function(address){
             inputAddress.val(address.address);
             inputLat.val(address.lat);
             inputLng.val(address.lng);
