@@ -43,7 +43,7 @@ class AddOrderForm {
         var orderParams = {};
         var elements = this._addOrderFormElement.find('input.param, select[name]');
         for(var i=0; i < elements.length; i++) {
-            orderParams[$(elements[i]).attr('name')] = $(elements[i]).val();
+            orderParams[$(elements[i]).attr('name')] = $(elements[i]).value();
         }
         orderParams.isSetDriverAutomatically = this._isSetDriverAutomaticallyChecked;
         var errors = validate(orderParams, this._addOrderFormConstraints);

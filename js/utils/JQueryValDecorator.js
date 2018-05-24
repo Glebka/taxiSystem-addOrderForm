@@ -1,7 +1,7 @@
 class JQueryValDecorator {
     constructor() {        
         var self = this;
-        $.fn.Value = function() {
+        $.fn.value = function() {
             if (arguments.length === 0) {
                 if (this.is('[data-class]')) {
                     var className = this.attr('data-class');
@@ -13,13 +13,13 @@ class JQueryValDecorator {
                         args.push(value);
                     });
                     if (window[className]) {
-                        var obj = new window[className](...args);
-                        console.log(obj);
+                        var obj = new window[className](...args);                        
+                        //console.log(obj);
                         return obj;
                     }
                 }                
             }            
-            return self._origVal.apply(this, arguments);
+            return this.val(...arguments);
         }
     }
 }
