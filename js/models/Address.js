@@ -29,6 +29,10 @@ class Address
     toString() {
         return this._text;
     }
+
+    isValid() {
+        return this._text && this._lat && this._lng;
+    }
 }
 
 (function(global) {
