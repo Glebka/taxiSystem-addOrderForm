@@ -1,6 +1,6 @@
 class JQueryValDecorator {
-    constructor() {        
-        var self = this;
+    constructor() {
+        var self = this;        
         $.fn.value = function() {
             if (arguments.length === 0) {
                 if (this.is('[data-class]')) {
@@ -14,7 +14,6 @@ class JQueryValDecorator {
                     });
                     if (window[className]) {
                         var obj = new window[className](...args);                        
-                        //console.log(obj);
                         return obj;
                     }
                 }                

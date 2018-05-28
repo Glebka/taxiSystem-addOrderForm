@@ -8,7 +8,7 @@ class Validation {
                     message: "^Пожалуйста, заполните это поле."
                 },
                 format: {
-                    pattern: /[А-Яа-я-ёЁ]*/,
+                    pattern: /[А-Яа-я-ёЁ\w]*/,
                     message: "^Имя может состоять только из букв."
                 },
                 length: {

@@ -56,10 +56,13 @@ class MapPopup {
             this._currentMarker = L.marker(e.latlng).addTo(this._map);
         } else {
             this._currentMarker.setLatLng(e.latlng);
-        }        
-        GeoService.getAddress(e.latlng, (function(addressText){
-            this._currentAddress = new Address(addressText, e.latlng.lat, e.latlng.lng);
             this._mapPopupelement.find(".address").html(addressText);
-        }).bind(this));
+        }        
+        GeoService.getAddress(e.latlng).then((address) => {
+            this._currentAddress = address;
+            this._mapPopupelement.find(".address").html(address.getText());
+        }).catch((err) => {
+            this._mapPopupelement.find(".address").html(err.message);
+        });
     }
 }
